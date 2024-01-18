@@ -9,6 +9,7 @@
 
     .card-title {
         font-size: var(--size-subtitle);
+        margin-bottom: 20px;
     }
 
     .card-content {
