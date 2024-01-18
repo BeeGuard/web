@@ -8,6 +8,9 @@
   --primary-border: 213, 213, 213;
   --size-title: 2rem;
   --size-subtitle: 1.5rem;
+
+  --card-background-primary: 247, 247, 247;
+  --card-background-secondary: 193, 183, 86;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +20,9 @@
     --primary-border: 66, 66, 66;
     --size-title: 2rem;
     --size-subtitle: 1.5rem;
+
+    --card-background-primary: 62, 62, 62;
+    --card-background-secondary: 193, 183, 86;
   }
 }
 

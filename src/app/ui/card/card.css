@@ -1,12 +1,19 @@
 .card {
-    width: 390px;
-    height: 310px;
+    width: 350px;
+    height: 300px;
+
+    padding: 35px 30px;
+    margin: 10px;
+
+    border-radius: 16px;
 
     .card-title {
-        font-size: var(--size-title);
+        font-size: var(--size-subtitle);
     }
 
     .card-content {
-
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
 }

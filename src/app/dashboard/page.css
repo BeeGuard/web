@@ -8,10 +8,10 @@
     flex-wrap: wrap;
 
     .card:nth-child(even) {
-        background-color: blue;
+        background-color: rgb(var(--card-background-secondary));
     }
 
     .card:nth-child(odd) {
-        background-color: yellow;
+        background-color: rgb(var(--card-background-primary));
     }
 }
