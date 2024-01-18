@@ -1,0 +1,12 @@
+.card {
+    width: 390px;
+    height: 310px;
+
+    .card-title {
+        font-size: var(--size-title);
+    }
+
+    .card-content {
+
+    }
+}

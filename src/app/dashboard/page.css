@@ -1,0 +1,17 @@
+.list-card {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    .card:nth-child(even) {
+        background-color: blue;
+    }
+
+    .card:nth-child(odd) {
+        background-color: yellow;
+    }
+}

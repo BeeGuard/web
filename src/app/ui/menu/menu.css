@@ -1,0 +1,36 @@
+.menu {
+    width: 280px;
+    height: 100vh;
+    border-right: 1px solid rgb(var(--primary-border));
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    .menu-title-icon {
+        position: absolute;
+        z-index: -1;
+        top: 47px;
+        left: 183px;
+    }
+}
+
+.menu-title {
+    font-size: var(--size-title);
+    margin: 30px 0 70px 0;
+}
+
+.menu-item {
+    font-size: var(--size-subtitle);
+
+    .menu-item-icon {
+        margin: 0 1rem;
+    }
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.menu-last-item {
+    margin: auto 0 10px;
+}
