@@ -8,7 +8,7 @@ export default function Bubble({value}: BubbleProps) {
     return (
         <div className={'bubble'} style={{backgroundColor: getColor(value)}}>
             <div className={'bubble-value'}>
-                {value}
+                {value}°C
             </div>
         </div>
     )

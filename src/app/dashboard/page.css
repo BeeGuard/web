@@ -7,6 +7,10 @@
     align-content: center;
     flex-wrap: wrap;
 
+    .card {
+        margin: 20px 40px;
+    }
+
     .card:nth-child(even) {
         background-color: rgb(var(--card-background-secondary));
     }

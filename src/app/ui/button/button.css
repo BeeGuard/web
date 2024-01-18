@@ -1,0 +1,18 @@
+.button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    min-width: 180px;
+    background: rgb(var(--card-background-secondary));
+
+    &.button-primary {
+        background: rgb(var(--card-background-primary));
+    }
+
+    &.button-secondary {
+        background: rgb(var(--card-background-secondary));
+    }
+
+    .button-icon {
+        filter: var(--icon-filter);
+    }
+}

@@ -6,11 +6,14 @@
   --foreground-rgb: 43, 43, 43;
   --background-rgb: 255, 255, 255;
   --primary-border: 213, 213, 213;
+
   --size-title: 2rem;
   --size-subtitle: 1.5rem;
 
   --card-background-primary: 247, 247, 247;
   --card-background-secondary: 193, 183, 86;
+
+  --icon-filter: invert(80%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,11 +21,14 @@
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 39, 39, 39;
     --primary-border: 66, 66, 66;
+
     --size-title: 2rem;
     --size-subtitle: 1.5rem;
 
     --card-background-primary: 62, 62, 62;
     --card-background-secondary: 193, 183, 86;
+
+    --icon-filter: invert(0);
   }
 }
 
