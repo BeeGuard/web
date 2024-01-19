@@ -1,10 +1,20 @@
+'use client'
+
 import Card from "@/app/ui/card/card";
 import './page.css';
 import Image from "next/image";
 import Bubble from "@/app/ui/bubble/bubble";
 import Button from "@/app/ui/button/button";
+import {Line, LineChart, XAxis, YAxis} from "recharts";
 
 export default function Dashboard() {
+    const data = [
+        {name: 'Page A', uv: 100, pv: 2400, amt: 2400},
+        {name: 'Page B', uv: 200, pv: 2400, amt: 2400},
+        {name: 'Page C', uv: 250, pv: 2400, amt: 2400},
+        {name: 'Page D', uv: 400, pv: 2400, amt: 2400}
+    ];
+
     return (
         <main>
             <div className={'list-card'}>
@@ -28,7 +38,9 @@ export default function Dashboard() {
                     </div>
                 </Card>
                 <Card title={'Poids moyen de vos ruches sur 1 mois en (kg)'}>
-                    <></>
+                    <LineChart width={290} height={140} data={data}>
+                        <Line type="monotone" dataKey="uv" stroke="rgb(var(--foreground-rgb))" />
+                    </LineChart>
                 </Card>
                 <Card title={'Nombre d’alertes à traiter :'}>
                     <div className={'flex flex-col items-center mt-2'}>
