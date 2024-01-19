@@ -4,7 +4,7 @@ import Card from "@/app/ui/card/card";
 import Image from "next/image";
 import Bubble from "@/app/ui/bubble/bubble";
 import Button from "@/app/ui/button/button";
-import {Line, LineChart, Tooltip} from "recharts";
+import {CartesianGrid, Line, LineChart, Tooltip} from "recharts";
 import './page.css';
 
 export default function Dashboard() {
@@ -40,6 +40,7 @@ export default function Dashboard() {
                 <Card title={'Poids moyen de vos ruches sur 1 mois en (kg)'}>
                     <LineChart width={290} height={140} data={data} margin={{top: 10, right: 10, left: 10}}>
                         <Line type="monotone" dataKey="kg" stroke="rgb(var(--foreground-rgb))" fill='rgb(var(--foreground-rgb))'/>
+                        <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
                     </LineChart>
                 </Card>
