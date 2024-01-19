@@ -4,7 +4,11 @@
 
 :root {
   --foreground-rgb: 43, 43, 43;
+  --secondary-foreground-rgb: 106, 106, 106;
+  --light-foreground-rgb: 139, 139, 139;
+
   --background-rgb: 255, 255, 255;
+
   --primary-border: 213, 213, 213;
 
   --size-title: 2rem;
@@ -19,7 +23,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
+    --secondary-foreground-rgb: 106, 106, 106;
+    --light-foreground-rgb: 156, 156, 156;
+
     --background-rgb: 39, 39, 39;
+
     --primary-border: 66, 66, 66;
 
     --size-title: 2rem;
