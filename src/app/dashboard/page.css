@@ -32,5 +32,9 @@
         .recharts-tooltip-item {
             color: rgb(var(--foreground-rgb));
         }
+
+        .recharts-dot {
+            fill: rgb(var(--foreground-rgb));
+        }
     }
 }

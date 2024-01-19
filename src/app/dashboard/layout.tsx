@@ -3,7 +3,7 @@ import Menu, {Item} from "@/app/ui/menu/menu";
 import './layout.css'
 
 export const metadata: Metadata = {
-    title: 'Bee Guard - Dashboard',
+    title: 'BeeGuard - Dashboard',
     description: 'Dashboard',
 }
 
