@@ -13,7 +13,7 @@ export default function Home() {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         console.log(event)
-        router.push('/dashboard')
+        router.push('/beekeeper/dashboard')
     }
 
     return (
