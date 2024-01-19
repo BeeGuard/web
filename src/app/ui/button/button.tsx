@@ -6,7 +6,7 @@ export interface ButtonProps {
     type: 'button' | 'submit' | 'reset'
     color?: 'primary' | 'secondary'
     icon?: string
-    onClick?: () => void
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export default function Button({value, type, color, icon, onClick}: ButtonProps) {

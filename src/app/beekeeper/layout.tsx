@@ -13,22 +13,22 @@ export default function Layout({children}: {
     const items: Item[] = [
         {
             name: 'Dashboard',
-            link: '/dashboard',
+            link: '/beekeeper/dashboard',
             iconSrc: '/dashboard.svg',
         },
         {
             name: 'Mes ruches',
-            link: '/beehives',
+            link: '/beekeeper/beehives',
             iconSrc: '/beehive.svg',
         },
         {
             name: 'Mes alertes',
-            link: '/alerts',
+            link: '/beekeeper/alerts',
             iconSrc: '/alert.svg',
         },
         {
             name: 'Paramètres',
-            link: '/settings',
+            link: '/beekeeper/settings',
             iconSrc: '/settings.svg',
         }
     ]

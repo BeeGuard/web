@@ -1,6 +1,6 @@
-import "./menu.css";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import "./menu.css";
 
 export interface MenuProps {
     items: Item[]
