@@ -8,14 +8,57 @@
     flex-wrap: wrap;
 
     .card {
-        margin: 20px 20px;
+        margin: 40px 30px;
+
+        .data-value {
+            font-size: var(--size-subtitle);
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .data-info {
+            text-align: center;
+        }
+
+        .data-name {
+            text-align: center;
+        }
+
+        .separator {
+            width: 1px;
+            height: 100%;
+            background-color: rgb(var(--foreground-rgb));
+            margin: 0 auto;
+            border-radius: 1px;
+        }
+
+        .beehive-date {
+            color: rgb(var(--light-foreground-rgb));
+        }
+
+        button {
+            min-width: 120px;
+        }
+
+        .data-icon {
+            filter: var(--icon-filter);
+            margin-left: 4px;
+        }
     }
 
     .card:nth-child(even) {
         background-color: rgb(var(--card-background-secondary));
+
+        .button {
+            background-color: rgb(var(--card-background-primary));
+        }
     }
 
     .card:nth-child(odd) {
         background-color: rgb(var(--card-background-primary));
+
+        .button {
+            background-color: rgb(var(--card-background-secondary));
+        }
     }
 }

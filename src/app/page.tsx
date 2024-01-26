@@ -18,14 +18,14 @@ export default function Home() {
         setLoading(true)
         console.log(event.target.email.value)
         await new Promise(resolve => setTimeout(resolve, 500));
-        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
         if (event.target.email.value?.includes('beekeeper')) {
-            toast.success('Welcome', { theme: darkThemeMq.matches ? 'dark' : 'light' })
+            toast.success('Welcome', {theme})
             setLoading(false)
             router.push('/beekeeper/dashboard')
         } else {
             setLoading(false)
-            toast.error('Incorrect email or password !', { theme: darkThemeMq.matches ? 'dark' : 'light' })
+            toast.error('Incorrect email or password !', {theme})
         }
     }
 
