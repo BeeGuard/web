@@ -8,13 +8,15 @@ export interface InputProps {
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     className?: string;
+    name?: string;
+    disable?: boolean;
 }
 
-export default function Input({ type, id, label, placeholder, value, className }: InputProps) {
+export default function Input({ type, id, label, placeholder, value, className, onChange, name, disable }: InputProps) {
     return (
         <div className={`${className} input`}>
             <label htmlFor={id}>{label}</label>
-            <input type={type} id={id} placeholder={placeholder} value={value}/>
+            <input type={type} id={id} placeholder={placeholder} value={value} onChange={onChange} name={name} disabled={disable}/>
         </div>
     )
 }

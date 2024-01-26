@@ -7,11 +7,12 @@ export interface ButtonProps {
     color?: 'primary' | 'secondary'
     icon?: string
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+    disable?: boolean
 }
 
-export default function Button({value, type, color, icon, onClick}: ButtonProps) {
+export default function Button({value, type, color, icon, onClick, disable}: ButtonProps) {
     return (
-        <button className={`button button-${color}`} type={type} onClick={onClick}>
+        <button className={`button button-${color}`} type={type} onClick={onClick} disabled={disable}>
             <div className={'flex justify-center items-center'}>
                 {value}
                 {icon && <Image
