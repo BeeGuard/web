@@ -2,29 +2,83 @@ import Image from "next/image";
 import './alert.css';
 
 export default function Alert() {
-    return (
-        <div className={'flex '}>
-            <div className={'beehive-alert'}>
-                <p className={'beehive-alert-name'}>Beehive n°1</p>
-                <Image
-                    src={'/shield.svg'}
-                    alt={'shield'}
-                    width={15}
-                    height={15}
-                />
+    const alerts = [
+        {
+            title: 'Temperature (°C)',
+            min: 12,
+            max: 40,
+        },
+        {
+            title: 'Humidity (%)',
+            min: 30,
+            max: 70,
+        },
+        {
+            title: 'Weight (kg)',
+            min: 30,
+            max: 70,
+        }
+    ]
 
-                <div>
-                    <p>Temperature</p>
+    return (
+        <div className={'flex flex-col'}>
+            <div className={'beehive-alert'}>
+                <div className={'flex flex-row justify-center items-center mx-4'}>
+                    <p className={'beehive-alert-name'}>Beehive n°1</p>
                     <Image
                         src={'/shield.svg'}
                         alt={'shield'}
-                        width={15}
-                        height={15}
+                        width={20}
+                        height={20}
                     />
-                    <p>12°</p>
-                    <div></div>
-                    <p>40°</p>
                 </div>
+                {alerts.map((alert, index) => (
+                    <div className={'editable-alert'} key={index}>
+                        <div className={'flex justify-around items-center'}>
+                            <p>{alert.title}</p>
+                            <Image
+                                src={'/shield.svg'}
+                                alt={'shield'}
+                                width={15}
+                                height={15}
+                            />
+                        </div>
+                        <div className={'editable-value flex justify-around items-center'}>
+                            <p>{alert.min}</p>
+                            <div className={'divider'}></div>
+                            <p>{alert.max}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div className={'beehive-alert'}>
+                <div className={'flex flex-row justify-center items-center mx-4'}>
+                    <p className={'beehive-alert-name'}>Beehive n°2</p>
+                    <Image
+                        src={'/shield.svg'}
+                        alt={'shield'}
+                        width={20}
+                        height={20}
+                    />
+                </div>
+                {alerts.map((alert, index) => (
+                    <div className={'editable-alert'} key={index}>
+                        <div className={'flex justify-around items-center'}>
+                            <p>{alert.title}</p>
+                            <Image
+                                src={'/shield.svg'}
+                                alt={'shield'}
+                                width={15}
+                                height={15}
+                            />
+                        </div>
+                        <div className={'editable-value flex justify-around items-center'}>
+                            <p>{alert.min}</p>
+                            <div className={'divider'}></div>
+                            <p>{alert.max}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

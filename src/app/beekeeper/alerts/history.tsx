@@ -1,9 +1,9 @@
 import LightButton from "@/app/ui/light-button/light-button";
 import Image from "next/image";
 import Button from "@/app/ui/button/button";
+import './history.css';
 
 export default function History() {
-
     return (
         <div className={'history'}>
             <div className={'buttons-filter'}>

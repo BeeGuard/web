@@ -4,10 +4,31 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    margin: 10px 20px;
 
-    .beehive-alert-name{
+    .beehive-alert-name {
         font-size: var(--size-subtitle);
+        padding: 0 10px;
+    }
+
+    .editable-alert {
+        background-color: rgb(var(--card-background-darker));
+        border-radius: 6px;
+        min-width: 200px;
+        margin: 20px 15px;
+        padding: 20px 20px;
+
+        .divider {
+            border: 1px solid rgb(var(--foreground-rgb));
+            border-radius: 1px;
+            height: 40px;
+            width: 1px;
+        }
+
+        .editable-value {
+            font-size: var(--size-subtitle);
+            margin: 20px 0;
+        }
     }
 }

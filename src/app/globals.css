@@ -16,6 +16,7 @@
 
   --card-background-primary: 247, 247, 247;
   --card-background-secondary: 193, 183, 86;
+  --card-background-darker: 255, 255, 255;
 
   --icon-filter: invert(80%);
 
@@ -37,6 +38,7 @@
 
     --card-background-primary: 62, 62, 62;
     --card-background-secondary: 193, 183, 86;
+    --card-background-darker: 43, 43, 43;
 
     --icon-filter: invert(0);
 
