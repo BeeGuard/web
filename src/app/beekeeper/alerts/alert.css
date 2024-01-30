@@ -1,0 +1,13 @@
+.beehive-alert {
+    background-color: rgb(var(--card-background-primary));
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .beehive-alert-name{
+        font-size: var(--size-subtitle);
+    }
+}

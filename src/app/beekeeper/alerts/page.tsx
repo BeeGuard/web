@@ -1,13 +1,12 @@
 'use client'
 
 import {useState} from "react";
-import Button from "@/app/ui/button/button";
-import Image from "next/image";
-import LightButton from "@/app/ui/light-button/light-button";
+import History from "@/app/beekeeper/alerts/history";
+import Alert from "@/app/beekeeper/alerts/alert";
 import './page.css';
 
 export default function Dashboard() {
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(1)
 
     return (
         <main className={'alerts'}>
@@ -21,38 +20,10 @@ export default function Dashboard() {
                 </div>
             </div>
             {currentIndex === 0 &&
-                <div className={'history'}>
-                    <div className={'buttons-filter'}>
-                        <LightButton type={'button'} value={'All'}/>
-                        <LightButton type={'button'} value={'Critical'}/>
-                        <LightButton type={'button'} value={'Warning'}/>
-                    </div>
-                    <div className={'list-alerts'}>
-                        <div className={'alert'}>
-                            <Image
-                                src={'/alert.svg'}
-                                alt={'alert'}
-                                width={40}
-                                height={40}
-                            />
-                            <p>Alert on <b>beehive n°1</b> : Temperature is lower than usual</p>
-                            <Button value={'Clear'} type={'button'}/>
-                        </div>
-                        <div className={'alert'}>
-                            <Image
-                                src={'/alert.svg'}
-                                alt={'alert'}
-                                width={40}
-                                height={40}
-                            />
-                            <p>Alert on <b>beehive n°3</b> : Temperature is higher than usual</p>
-                            <Button value={'Clear'} type={'button'}/>
-                        </div>
-                    </div>
-                </div>
+                <History/>
             }
             {currentIndex === 1 &&
-                <h1>Hello custom alert</h1>
+                <Alert/>
             }
         </main>
     )

@@ -19,7 +19,7 @@
 
   --icon-filter: invert(80%);
 
-  --light-button-background: 45, 45, 45;
+  --light-button-background: 210, 210, 210;
 }
 
 @media (prefers-color-scheme: dark) {
