@@ -6,7 +6,7 @@ import Alert from "@/app/beekeeper/alerts/alert";
 import './page.css';
 
 export default function Dashboard() {
-    const [currentIndex, setCurrentIndex] = useState(1)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     return (
         <main className={'alerts'}>
