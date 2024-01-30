@@ -18,6 +18,8 @@
   --card-background-secondary: 193, 183, 86;
 
   --icon-filter: invert(80%);
+
+  --light-button-background: 45, 45, 45;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +39,8 @@
     --card-background-secondary: 193, 183, 86;
 
     --icon-filter: invert(0);
+
+    --light-button-background: 45, 45, 45;
   }
 }
 

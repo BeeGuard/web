@@ -1,0 +1,12 @@
+.light-button {
+    padding: 4px 10px;
+    border-radius: 4px;
+    min-width: 80px;
+    background: rgb(var(--light-button-background));
+    border: 1px solid rgb(var(--primary-border));
+    transition-duration: 500ms;
+
+    &:hover {
+        filter: contrast(80%);
+    }
+}

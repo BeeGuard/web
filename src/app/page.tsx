@@ -33,7 +33,7 @@ export default function Home() {
         <>
             <main>
                 <div className='flex justify-center pt-4'>
-                    <p>BeeGuard</p>
+                    <p>Pnapi</p>
                     <Image
                         src={'/shield.svg'}
                         alt={'shield'}

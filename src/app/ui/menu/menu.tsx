@@ -17,7 +17,7 @@ export default function Menu({items}: MenuProps) {
         <div className={'menu'}>
             <Link href={'/'} className={'menu-title'}>
                 <div className={'flex justify-center'}>
-                    BeeGuard
+                    Pnapi
                     <Image
                         className={'menu-title-icon'}
                         src={'/shield.svg'}

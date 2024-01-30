@@ -7,8 +7,8 @@ import './globals.css'
 const lexend = Lexend({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BeeGuard',
-  description: 'BeeGuard',
+  title: 'Pnapi',
+  description: 'Pnapi',
 }
 
 export default function RootLayout({
