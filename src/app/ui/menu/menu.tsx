@@ -41,7 +41,7 @@ export default function Menu({items}: MenuProps) {
                     </div>
                 </Link>
             ))}
-            <Link href={'/'} className={'menu-item menu-last-item'}>
+            <Link href={'/'} className={'menu-item menu-last-item'} onClick={() => localStorage.clear()}>
                 <div className={'flex items-center'}>
                     <Image
                         className={'menu-item-icon'}

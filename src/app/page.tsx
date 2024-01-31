@@ -2,27 +2,32 @@
 
 import Image from "next/image";
 import Button from "@/app/ui/button/button";
-import './page.css';
 import Input from "@/app/ui/input/input";
 import Link from "next/link";
-import {useRouter} from "next/navigation";
+import {redirect, useRouter} from "next/navigation";
 import {toast} from "react-toastify";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Login} from '@/app/services/authentification'
+import './page.css';
 
 export default function Home() {
     const [loading, setLoading] = useState(false)
     const router = useRouter()
 
+    useEffect(() => {
+        const user = localStorage.getItem('user')
+        if(user) redirect('/beekeeper/dashboard')
+    })
+
     async function onSubmit(event: any) {
         event.preventDefault()
-        //setLoading(true)
-        const token = await Login(event.target.email.value, event.target.password.value)
-        console.log(token)
+        setLoading(true)
+        const response = await Login(event.target.email.value, event.target.password.value)
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-
-        if (event.target.email.value?.includes('beekeeper')) {
-            toast.success('Welcome', {theme})
+        if (response?.data?.token) {
+            localStorage.setItem('user', response?.data?.username)
+            localStorage.setItem('token', response?.data?.token)
+            toast.success(`Welcome ${response?.data?.username}`, {theme})
             setLoading(false)
             router.push('/beekeeper/dashboard')
         } else {

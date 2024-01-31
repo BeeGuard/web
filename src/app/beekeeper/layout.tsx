@@ -1,15 +1,19 @@
-import type {Metadata} from "next";
-import Menu, {Item} from "@/app/ui/menu/menu";
-import './layout.css'
+'use client'
 
-export const metadata: Metadata = {
-    title: 'Pnapi - Dashboard',
-    description: 'Dashboard',
-}
+import Menu, {Item} from "@/app/ui/menu/menu";
+import {redirect} from "next/navigation";
+import {useEffect} from "react";
+import './layout.css'
 
 export default function Layout({children}: {
     children: React.ReactNode
 }) {
+    useEffect(() => {
+        const user = localStorage.getItem('user')
+        console.log(user)
+        if(!user) redirect('/')
+    })
+
     const items: Item[] = [
         {
             name: 'Dashboard',
