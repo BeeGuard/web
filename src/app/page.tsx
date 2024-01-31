@@ -8,6 +8,7 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {toast} from "react-toastify";
 import {useState} from "react";
+import {Login} from '@/app/services/authentification'
 
 export default function Home() {
     const [loading, setLoading] = useState(false)
@@ -15,10 +16,11 @@ export default function Home() {
 
     async function onSubmit(event: any) {
         event.preventDefault()
-        setLoading(true)
-        console.log(event.target.email.value)
-        await new Promise(resolve => setTimeout(resolve, 500));
+        //setLoading(true)
+        const token = await Login(event.target.email.value, event.target.password.value)
+        console.log(token)
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+
         if (event.target.email.value?.includes('beekeeper')) {
             toast.success('Welcome', {theme})
             setLoading(false)
