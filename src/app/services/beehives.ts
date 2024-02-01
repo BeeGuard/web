@@ -30,3 +30,16 @@ export async function createBeehive(name: string) {
             console.error(error);
         });
 }
+
+export async function beehive(id: string) {
+    const token = localStorage.getItem('token');
+
+    return await axios.get(`${baseUrl}/app/hive/${id}`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .catch(function (error) {
+            console.error(error);
+        });
+}

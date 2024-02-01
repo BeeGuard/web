@@ -20,7 +20,7 @@ export default function Dashboard() {
             <div className={'list-card'}>
                 <Card title={'Nombre de vos ruches sous notre surveillance :'}>
                     <div className={'flex items-center mt-10'}>
-                        <p className={'font-bold text-2xl mr-2'}>5</p>
+                        <p className={'font-bold text-2xl mr-2'}>2</p>
                         <Image
                             src={'/beehive.svg'}
                             alt={'beehive'}
