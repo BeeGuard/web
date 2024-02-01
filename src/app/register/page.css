@@ -1,0 +1,22 @@
+.login-card {
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 500px;
+
+    background-color: rgb(var(--card-background-primary));
+
+    .login-title {
+        font-size: var(--size-subtitle);
+        text-align: center;
+    }
+
+    .login-subtitle {
+        text-align: center;
+        color: rgb(var(--secondary-foreground-rgb));
+    }
+
+    .login-text-light {
+        color: rgb(var(--light-foreground-rgb));
+    }
+
+}

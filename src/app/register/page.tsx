@@ -10,7 +10,7 @@ import {useEffect, useState} from "react";
 import {Login} from '@/app/services/authentification'
 import './page.css';
 
-export default function Home() {
+export default function Register() {
     const [loading, setLoading] = useState(false)
     const router = useRouter()
 
@@ -50,8 +50,8 @@ export default function Home() {
                 </div>
                 <div className={'flex items-center justify-center h-[80vh]'}>
                     <div className={'login-card'}>
-                        <p className='login-subtitle'>Bon retour</p>
-                        <p className='login-title'>Connectez-vous à votre compte</p>
+                        <p className='login-subtitle'>Bienvenue</p>
+                        <p className='login-title'>Inscrivez-vous à Pnapi !</p>
                         <div className='mt-8'>
                             <form onSubmit={onSubmit}>
                                 <Input
@@ -65,17 +65,23 @@ export default function Home() {
                                     type={'password'}
                                     id={'password'}
                                     name={'password'}
-                                    label={<div className='flex justify-between'><p>Mot de passe</p><p
-                                        className='login-text-light text-sm'>Mot de passe oublié ?</p></div>}
+                                    label={'Mot de passe'}
                                     placeholder={'Entrez votre mot de passe'}
                                 />
+                                <Input
+                                    type={'text'}
+                                    id={'text'}
+                                    label={'Token'}
+                                    name={'token'}
+                                    placeholder={'Token'}
+                                />
                                 <div className='flex justify-center my-5'>
-                                    <Button type={'submit'} value={loading ? 'Chargement...' : 'Connexion'} disable={loading}/>
+                                    <Button type={'submit'} value={loading ? 'Chargement...' : 'S\'inscrire'} disable={loading}/>
                                 </div>
                             </form>
                         </div>
-                        <p><span className='login-text-light'>{'Vous n\'êtes pas encore inscrit ?'}</span> <Link
-                            href={'/register'}>Créer un compte</Link></p>
+                        <p><span className='login-text-light'>Déjà un compte ?</span> <Link
+                            href={'/'}>Connexion</Link></p>
                     </div>
                 </div>
             </main>
