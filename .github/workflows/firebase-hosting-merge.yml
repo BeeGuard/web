@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PNAPI_C20F4 }}'
           channelId: live
           projectId: pnapi-c20f4
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
