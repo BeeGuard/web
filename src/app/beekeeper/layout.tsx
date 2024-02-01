@@ -10,7 +10,6 @@ export default function Layout({children}: {
 }) {
     useEffect(() => {
         const user = localStorage.getItem('user')
-        console.log(user)
         if(!user) redirect('/')
     })
 
