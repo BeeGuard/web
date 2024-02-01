@@ -1,0 +1,34 @@
+.modal {
+    z-index: 2;
+    background-color: rgb(var(--card-background-primary));
+
+    position: fixed;
+    width: 30%;
+    height: 40%;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: auto;
+    left: 35%;
+    top: 25%;
+
+    .modal-title {
+        margin-top: 20px;
+        text-align: center;
+        font-size: var(--size-subtitle);
+    }
+
+    .modal-actions {
+        margin-top: 140px;
+    }
+}
+
+.blur-effect {
+    z-index: 1;
+    background-color: rgba(var(--foreground-rgb), 0.5);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}

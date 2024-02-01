@@ -29,7 +29,7 @@ export default function Dashboard() {
                         />
                     </div>
                 </Card>
-                <Card title={'Température moyenne dans vos ruches :'}>
+                <Card title={'Température intérieur moyenne des ruches :'}>
                     <Bubble value={new Date().getHours()}/>
                 </Card>
                 <Card title={'Statistique des derniers mois pour l’ensemble de vos ruches'}>

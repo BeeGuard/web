@@ -10,13 +10,14 @@ export interface InputProps {
     className?: string;
     name?: string;
     disable?: boolean;
+    defaultValue?: string | number
 }
 
-export default function Input({ type, id, label, placeholder, value, className, onChange, name, disable }: InputProps) {
+export default function Input({ type, id, label, placeholder, value, className, onChange, name, disable, defaultValue }: InputProps) {
     return (
         <div className={`${className} input`}>
             <label htmlFor={id}>{label}</label>
-            <input type={type} id={id} placeholder={placeholder} value={value} onChange={onChange} name={name} disabled={disable}/>
+            <input type={type} id={id} placeholder={placeholder} value={value} onChange={onChange} name={name} defaultValue={defaultValue} disabled={disable}/>
         </div>
     )
 }

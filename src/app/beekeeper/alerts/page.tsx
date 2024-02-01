@@ -1,8 +1,8 @@
 'use client'
 
 import {useState} from "react";
-import History from "@/app/beekeeper/alerts/history";
-import Alert from "@/app/beekeeper/alerts/alert";
+import History from "@/app/beekeeper/alerts/history/history";
+import Alert from "@/app/beekeeper/alerts/alert/alert";
 import './page.css';
 
 export default function Dashboard() {

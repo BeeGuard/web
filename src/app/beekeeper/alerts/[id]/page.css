@@ -1,0 +1,29 @@
+.alert-beehive {
+    margin: 10px 20px;
+
+    .title {
+        font-size: var(--size-title);
+        text-align: center;
+    }
+
+    .beehive-properties {
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 30px;
+    }
+
+
+    .beehive-properties:nth-child(even) {
+        margin-left: 20px;
+        background-color: rgb(var(--card-background-secondary));
+    }
+
+    .beehive-properties:nth-child(odd) {
+        margin-right: 20px;
+        background-color: rgb(var(--card-background-primary));
+    }
+
+    .input {
+        padding: 10px;
+    }
+}
