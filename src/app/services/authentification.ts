@@ -1,16 +1,7 @@
 import axios, {AxiosResponse} from 'axios'
+import {baseUrl} from "@/app/services/global";
 
-const baseUrl = 'http://api.pnapi.thibaulthenrion.com/api'
-
-export interface LoginResponse {
-    token: string
-    type: string
-    username: string
-    email: string
-    roles: string[]
-}
-
-export async function Login(email: string, password: string): Promise<AxiosResponse<any> | void> {
+export async function login(email: string, password: string): Promise<AxiosResponse<any> | void> {
     const body = {
         username: email,
         password: password
@@ -22,7 +13,7 @@ export async function Login(email: string, password: string): Promise<AxiosRespo
         });
 }
 
-export async function Register(email: string, password: string, token: string) {
+export async function register(email: string, password: string, token: string) {
     const body = {
         email: email,
         password: password,

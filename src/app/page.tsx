@@ -7,7 +7,7 @@ import Link from "next/link";
 import {redirect, useRouter} from "next/navigation";
 import {toast} from "react-toastify";
 import {useEffect, useState} from "react";
-import {Login} from '@/app/services/authentification'
+import {login} from '@/app/services/authentification'
 import './page.css';
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
     async function onSubmit(event: any) {
         event.preventDefault()
         setLoading(true)
-        const response = await Login(event.target.email.value, event.target.password.value)
+        const response = await login(event.target.email.value, event.target.password.value)
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
         if (response?.data?.token) {
             localStorage.setItem('user', response?.data?.username)
