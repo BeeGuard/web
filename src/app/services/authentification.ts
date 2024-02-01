@@ -22,6 +22,15 @@ export async function Login(email: string, password: string): Promise<AxiosRespo
         });
 }
 
-export function SignUp() {
+export async function Register(email: string, password: string, token: string) {
+    const body = {
+        email: email,
+        password: password,
+        authCode: token
+    }
 
+    return await axios.post(`${baseUrl}/app/register`, body)
+        .catch(function (error) {
+            console.error(error);
+        });
 }

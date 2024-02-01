@@ -7,32 +7,32 @@ import Link from "next/link";
 import {redirect, useRouter} from "next/navigation";
 import {toast} from "react-toastify";
 import {useEffect, useState} from "react";
-import {Login} from '@/app/services/authentification'
+import {Register} from '@/app/services/authentification'
 import './page.css';
 
-export default function Register() {
+export default function Home() {
     const [loading, setLoading] = useState(false)
     const router = useRouter()
 
     useEffect(() => {
         const user = localStorage.getItem('user')
-        if(user) redirect('/beekeeper/dashboard')
+        if (user) redirect('/beekeeper/dashboard')
     })
 
     async function onSubmit(event: any) {
         event.preventDefault()
         setLoading(true)
-        const response = await Login(event.target.email.value, event.target.password.value)
+        const response = await Register(event.target.email.value, event.target.password.value, event.target.token.value)
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
         if (response?.data?.token) {
             localStorage.setItem('user', response?.data?.username)
             localStorage.setItem('token', response?.data?.token)
-            toast.success(`Welcome ${response?.data?.username}`, {theme})
+            toast.success(`Bienvenue ${response?.data?.username}`, {theme})
             setLoading(false)
             router.push('/beekeeper/dashboard')
         } else {
             setLoading(false)
-            toast.error('Incorrect email or password !', {theme})
+            toast.error('Erreur lors de l\'enregistrement', {theme})
         }
     }
 
@@ -76,7 +76,8 @@ export default function Register() {
                                     placeholder={'Token'}
                                 />
                                 <div className='flex justify-center my-5'>
-                                    <Button type={'submit'} value={loading ? 'Chargement...' : 'S\'inscrire'} disable={loading}/>
+                                    <Button type={'submit'} value={loading ? 'Chargement...' : 'S\'inscrire'}
+                                            disable={loading}/>
                                 </div>
                             </form>
                         </div>
