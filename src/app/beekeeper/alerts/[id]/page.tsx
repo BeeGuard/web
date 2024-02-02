@@ -82,7 +82,7 @@ export default function Beehive({params}: { params: { id: string } }) {
                                 type={'text'}
                                 label={'Maximum'}
                                 name={'humMax'}
-                                placeholder={hive?.threshold?.upperHumidity.toString()}
+                                placeholder={hive?.threshold?.upperHumidity?.toString()}
                                 defaultValue={hive?.threshold?.upperHumidity}
                             />
                         </div>

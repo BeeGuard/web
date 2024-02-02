@@ -44,7 +44,7 @@ export default function Beehives() {
                                 <div className={'col-span-5'}>
                                     <p
                                         className={'data-value'}
-                                        style={{color: getColor(hive?.latestTimestampInfo?.interiorHumidity, hive?.threshold?.lowerTemp, hive?.threshold?.upperTemp)}}>{hive?.latestTimestampInfo?.interiorHumidity ?? '~'}°C</p>
+                                        style={{color: getColor(hive?.latestTimestampInfo?.interiorTemperature, hive?.threshold?.lowerTemp, hive?.threshold?.upperTemp)}}>{hive?.latestTimestampInfo?.interiorTemperature ?? '~'}°C</p>
                                     <p className={'data-name'}>Température</p>
                                     <div className={'flex justify-center'}>
                                         <p className={'data-info'}>{hive?.threshold?.lowerTemp ?? '~'}°C
