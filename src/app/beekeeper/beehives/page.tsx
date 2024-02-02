@@ -12,6 +12,8 @@ import './page.css';
 
 export default function Beehives() {
     const [open, setOpen] = useState(false)
+    const [openInfo, setOpenInfo] = useState(false)
+    const [hive, setHive] = useState<any>({})
     const [loading, setLoading] = useState(true)
     const [hives, setHives] = useState([])
     const [reload, setReload] = useState(false)
@@ -68,7 +70,11 @@ export default function Beehives() {
                             </div>
                             <div className={'flex justify-between items-center'}>
                                 <p className='beehive-date'>Créée le 24/01/24</p>
-                                <Button value={'Plus d\'info'} type={'button'}></Button>
+                                <Button value={'Plus d\'info'} type={'button'} onClick={() => {
+                                    setHive(hive)
+                                    console.log(hive)
+                                    setOpenInfo(true)
+                                }}></Button>
                             </div>
                         </div>
                     </Card>
@@ -94,6 +100,30 @@ export default function Beehives() {
                         <div className='flex justify-around modal-actions'>
                             <Button type={'button'} value={'Annuler'} onClick={() => setOpen(false)}/>
                             <Button type={'submit'} value={'Ajouter'}/>
+                        </div>
+                    </form>
+                </div>
+            </Modal>
+            <Modal open={openInfo} setOpen={setOpenInfo}>
+                <div className='h-auto'>
+                    <p className='modal-title'>{`Informations supplémentaires`}</p>
+                    <form className={'mt-4 p-4'} onSubmit={onSubmit}>
+                        <Input
+                            type={'text'}
+                            id={'beehive-luminosity'}
+                            label={'Exposition UV'}
+                            placeholder={'0'}
+                            defaultValue={hive?.latestTimestampInfo?.uvIndex}
+                        />
+                        <Input
+                            type={'text'}
+                            id={'beehive-weight'}
+                            label={'Poids'}
+                            placeholder={'0'}
+                            defaultValue={hive?.latestTimestampInfo?.weight}
+                        />
+                        <div className='flex justify-around modal-actions-info'>
+                            <Button type={'button'} value={'Quitter'} onClick={() => setOpenInfo(false)}/>
                         </div>
                     </form>
                 </div>

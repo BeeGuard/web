@@ -20,6 +20,10 @@
     .modal-actions {
         margin-top: 140px;
     }
+
+    .modal-actions-info {
+        margin-top: 40px;
+    }
 }
 
 .blur-effect {
